@@ -1,0 +1,7 @@
+{
+  "name": "zsrep50",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
