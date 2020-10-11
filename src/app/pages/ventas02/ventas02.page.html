@@ -1,0 +1,26 @@
+<app-header titulo="Ventas Sucursal/Vendedor"></app-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label class="AnchoMenor">Sucursal</ion-label>
+            <ion-select class="AnchoMayor" [(ngModel)]="codSucursal" multiple="false" cancelText="Cancelar" okText="Ok!" interface="action-sheet" mode="ios">
+                <ion-select-option *ngFor="let fila of sucursales" value="{{ fila.sucursal }}">{{ fila.nombresuc }}</ion-select-option>
+            </ion-select>
+            <ion-button class="AnchoResto" expand="block" color="dark" (click)="procesarVtasSucVendedor()">
+                <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
+            </ion-button>
+        </ion-item>
+
+        <ion-progress-bar color="danger" type="indeterminate" *ngIf="buscando"></ion-progress-bar>
+
+    </ion-list>
+
+    <div style="margin-top: 25px;">
+        <div id="pie_chart_div2"></div>
+        <div id="table_div2" style="overflow-y: auto;height: 400px;"></div>
+    </div>
+
+</ion-content>

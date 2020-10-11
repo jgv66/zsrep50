@@ -1,0 +1,25 @@
+<app-header titulo="Sucursal Anual"></app-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label class="AnchoMenor">Sucursal/Año</ion-label>
+            <ion-select class="AnchoMayor" [(ngModel)]="codSucAnno" multiple="false" cancelText="Cancelar" okText="Ok!" interface="alert" mode="ios">
+                <ion-select-option *ngFor="let fila of sucursales" value="{{ fila.sucursalanno }}">{{ fila.anno +'/'+ fila.nombresuc }}</ion-select-option>
+            </ion-select>
+            <ion-button class="AnchoResto" expand="block" color="dark" (click)="procesarVtasSucAnual()">
+                <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
+            </ion-button>
+        </ion-item>
+        <ion-progress-bar color="danger" type="indeterminate" *ngIf="buscando"></ion-progress-bar>
+
+    </ion-list>
+
+    <div style="margin-top: 25px;">
+        <div id="line_curve_chart12"></div>
+        <div id="table_div12"></div>
+    </div>
+
+</ion-content>

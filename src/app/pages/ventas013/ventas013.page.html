@@ -1,0 +1,31 @@
+<app-header titulo="Sucursal/Vendedor Histórico"></app-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label class="AnchoMenor">Sucursal</ion-label>
+            <ion-select class="AnchoMayor" [(ngModel)]="codSucursal" multiple="false" cancelText="Cancelar" okText="Ok!" interface="alert" mode="ios">
+                <ion-select-option *ngFor="let fila of sucursales" value="{{ fila.sucursal }}">{{ fila.nombresuc }}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label class="AnchoMenor">Periodo</ion-label>
+            <ion-select class="AnchoMayor" [(ngModel)]="annomes" multiple="false" cancelText="Cancelar" okText="Ok!" interface="alert" mode="ios">
+                <ion-select-option *ngFor="let periodo of periodos" value="{{ periodo.periodo }}">{{ periodo.annomesnom }}</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+    </ion-list>
+    <ion-progress-bar color="danger" type="indeterminate" *ngIf="buscando"></ion-progress-bar>
+    <ion-button expand="block" color="dark" (click)="procesarVtasSucVendedorHist()">
+        <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
+    </ion-button>
+
+    <div style="margin-top: 25px;">
+        <div id="pie_chart_div13"></div>
+        <div id="table_div13"></div>
+    </div>
+
+</ion-content>

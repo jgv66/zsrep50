@@ -1,0 +1,25 @@
+[{
+        "title": "Venta Sucursal",
+        "menus": [
+            { "redirectTo": "/ventas01", "icon": "calendar-outline", "name": "Hasta hoy" },
+            { "redirectTo": "/ventas02", "icon": "people-outline", "name": "Vendedores, hasta hoy" },
+            { "redirectTo": "/ventas03", "icon": "person-outline", "name": "Vendedor, hasta hoy" },
+            { "redirectTo": "/ventas04", "icon": "people-circle-outline", "name": "Total Vendedores" }
+        ]
+    },
+    {
+        "title": "Venta Histórica",
+        "menus": [
+            { "redirectTo": "/ventas011", "icon": "calendar", "name": "Ventas" },
+            { "redirectTo": "/ventas012", "icon": "people", "name": "Vendedores, Mes a seleccionar" },
+            { "redirectTo": "/ventas013", "icon": "person", "name": "Total Vendedores, Mes a seleccionar" },
+            { "redirectTo": "/ventas014", "icon": "people-circle", "name": "Sucursal/Año a seleccionar" }
+        ]
+    },
+    {
+        "title": "Logout",
+        "menus": [
+            { "redirectTo": "/logout", "icon": "exit", "name": "Salir del sistema" }
+        ]
+    }
+]

@@ -1,0 +1,24 @@
+<app-header titulo="Sucursal Histórica"></app-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label class="AnchoMenor">Período</ion-label>
+            <ion-select class="AnchoMayor" [(ngModel)]="periodo" multiple="false" cancelText="Cancelar" okText="Ok!" interface="alert" mode="ios">
+                <ion-select-option *ngFor="let annomes of periodos" value="{{ annomes.periodo }}">{{ annomes.annomesnom }}</ion-select-option>
+            </ion-select>
+            <ion-button class="AnchoResto" expand="block" color="dark" (click)="procesarVtasHSucursal()">
+                <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
+            </ion-button>
+        </ion-item>
+        <ion-progress-bar color="danger" type="indeterminate" *ngIf="buscando"></ion-progress-bar>
+
+    </ion-list>
+
+    <div style="margin-top: 25xp;">
+        <div id="pie_chart_div11"></div>
+        <div id="table_div11"></div>
+    </div>
+</ion-content>

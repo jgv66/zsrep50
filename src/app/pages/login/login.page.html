@@ -1,0 +1,35 @@
+<app-header titulo="Login"></app-header>
+
+<ion-content>
+
+    <div class="container">
+
+        <img class="logo-row" src="assets/imgs/logo-001.png">
+
+        <div class="body">
+
+            <ion-list>
+
+                <ion-item>
+                    <ion-icon slot="start" name="at-outline"></ion-icon>
+                    <ion-input type="text" placeholder="Email" [(ngModel)]="email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-icon slot="start" name="key-outline"></ion-icon>
+                    <ion-input type="password" placeholder="Password" [(ngModel)]="pssw"></ion-input>
+                </ion-item>
+
+            </ion-list>
+
+            <ion-progress-bar color="danger" type="indeterminate" *ngIf="buscando"></ion-progress-bar>
+            <ion-button expand="block" (click)="doLogin()">Ingresar</ion-button>
+        </div>
+
+        <ion-row class="logo-kinetik">
+            <img src="assets/imgs/logo-kinetik.png">
+        </ion-row>
+    </div>
+
+
+</ion-content>

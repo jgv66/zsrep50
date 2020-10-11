@@ -1,0 +1,24 @@
+<app-header titulo="Total Vendedores Histórico"></app-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label class="AnchoMenor">Periodo</ion-label>
+            <ion-select class="AnchoMayor" [(ngModel)]="annomes" multiple="false" cancelText="Cancelar" okText="Ok!" interface="alert" mode="ios">
+                <ion-select-option *ngFor="let periodo of periodos" value="{{ periodo.periodo }}">{{ periodo.annomesnom }}</ion-select-option>
+            </ion-select>
+            <ion-button class="AnchoResto" expand="block" color="dark" (click)="procesarVtasVendHist()">
+                <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
+            </ion-button>
+        </ion-item>
+        <ion-progress-bar color="danger" type="indeterminate" *ngIf="buscando"></ion-progress-bar>
+
+    </ion-list>
+    <div style="margin-top: 25px;">
+        <div id="pie_chart_div14"></div>
+        <div id="table_div14"></div>
+    </div>
+
+</ion-content>
