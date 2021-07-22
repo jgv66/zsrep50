@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">ZSReport 5.0</string>
-    <string name="title_activity_main">ZSReport 5.0</string>
-    <string name="package_name">cl.kinetik.zsreport50</string>
-    <string name="custom_url_scheme">cl.kinetik.zsreport50</string>
-</resources>
